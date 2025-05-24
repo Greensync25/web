@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background-color: #a8e6a3;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #d4f5d0;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      text-align: center;
+      background-color: #f8fff8;
+    }
+    .product button {
+      background-color: #a8e6a3;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #d4f5d0;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    #carrito {
+      background-color: #f1fff1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GREEN SYNC</h1>
+  </header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#carrito">Carrito</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenido a nuestra tienda</h2>
+    <p>Ofrecemos productos ecológicos para todos los gustos.</p>
+  </section>
+
+  <section id="nosotros">
+    <h2>Nosotros</h2>
+    <h3>Visión dssd.</h3>
+    <p>Ser un referente en la innovación de sistemas inteligentes de cuidado de plantas, utilizando tecnología avanzada para crear entornos óptimos y automatizados que mejoren la eficiencia en el cultivo y la jardinería, contribuyendo al crecimiento saludable y sostenible de las plantas.</p>
+    <h3>Misión.</h3>
+     <p>Automatizar el cuidado de las plantas mediante el uso de sensores y actuadores, proporcionando un entorno controlado que garantice el monitoreo de la humedad, temperatura, riego y luz adecuada para optimizar el crecimiento y bienestar de las plantas.</p>
+
+  </section>
+
+  <section id="productos">
+    <h2>Productos</h2>
+    <div class="product">
+      <img src="nose.jpg"/>
+      <h3>Maceta Inteligente</h3>
+      <p>Q150</p>
+      <button onclick="agregarAlCarrito('Maceta Inteligente', 150)">Agregar al carrito</button>
+    </div>
+    <div class="product">
+      <h3>Kit de Huerto Urbano</h3>
+      <p>Q200</p>
+      <button onclick="agregarAlCarrito('Kit de Huerto Urbano', 200)">Agregar al carrito</button>
+    </div>
+  </section>
+
+  <section id="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="lista-carrito"></ul>
+    <p><strong>Total:</strong> Q<span id="total">0</span></p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Escríbenos a: contacto@mitiendaverde.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mi Tienda Verde</p>
+  </footer>
+
+  <script>
+    let total = 0;
+    function agregarAlCarrito(producto, precio) {
+      const lista = document.getElementById('lista-carrito');
+      const item = document.createElement('li');
+      item.textContent = `${producto} - Q${precio}`;
+      lista.appendChild(item);
+      total += precio;
+      document.getElementById('total').textContent = total;
+    }
+  </script>
+</body>
+</html>
