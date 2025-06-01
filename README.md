@@ -205,9 +205,9 @@
         </div>
 
         <div class="product">
-            <h3>Macetas Tradicionales</h3>
+            <h3>Macetas</h3>
             <img src="003.jpg" alt="Macetas Tradicionales">
-            <p>Q.75.00</p>
+            <p>Q.65.00</p>
             <button onclick="agregarAlCarrito('Macetas Tradicionales', 75)">Agregar al carrito</button>
         </div>
     </section>
